@@ -6,35 +6,14 @@ using namespace std;
 
 string isPerfectSquare(int num)
 {
-    if (num < 0)
+    for (int i = 0; i <= num; i++)
     {
-        return "No";
-    }
-
-    int low = 1;
-    int high = num;
-
-    while (low <= high)
-    {
-        int mid = low + ((high - low) >> 1);
-        int square = mid * mid;
-
-        if (square == num)
-        {
-            return "Yes";
-        }
-
-        if (square < num)
-        {
-            low = mid + 1;
-        }
-        else
-        {
-            high = mid - 1;
+        if (i * i == num)
+        {https://www.onlinegdb.com/#tab-stdin
+            return "Perfect square";
         }
     }
-
-    return "No";
+    return "Not a  perfect square";
 }
 
 int main()
