@@ -9,6 +9,7 @@ string isPerfectSquare(int num)
     for (int i = 0; i <= num; i++)
     {
         if (i * i == num)
+        {
        
             return "Perfect square";
         }
