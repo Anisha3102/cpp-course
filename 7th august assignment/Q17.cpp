@@ -9,7 +9,7 @@ string isPerfectSquare(int num)
     for (int i = 0; i <= num; i++)
     {
         if (i * i == num)
-        {https://www.onlinegdb.com/#tab-stdin
+       
             return "Perfect square";
         }
     }
