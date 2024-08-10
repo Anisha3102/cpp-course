@@ -1,39 +1,32 @@
-// Q9
-// Develop a C++ function that takes a string as an argument and returns whether it is a palindrome (reads the same backward as forward) using if-else statements.
-
-
+// To check a string is palindrome or not
 
 #include <bits/stdc++.h>
 using namespace std;
 
-string palindrome(int k)
+string isPalindrome(string str)
 {
-    int temp = k;
-    int sum = 0;
-    while (k > 0)
+    int left = 0;
+    int right = str.length() - 1;
+
+    while (left < right)
     {
-        int rem = k % 10;
-        sum = sum * 10 + rem;
-        k = k / 10;
+        if (str[left] != str[right])
+        {
+            return "String is not palindrome";
+        }
+        left++;
+        right--;
     }
-    if (sum == temp)
-    {
-        return "palindrome";
-    }
-    else
-    {
-        return "not palindrome";
-    }
+    return "String is palindrome";
 }
 
 int main()
 {
-    int k;
-    cout << "Enter a number : ";
-    cin >> k;
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
 
-    cout << palindrome(k);
+    cout << isPalindrome(input);
 
     return 0;
 }
-
