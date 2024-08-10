@@ -1,28 +1,31 @@
-// Q16
-// Develop a C++ function that takes an integer as an argument and returns whether it is divisible by both 3 and 5 using logical operators.
+// Q20
+
+// Implement a C++ function that takes a day of the week as an argument and returns whether it's a weekday or a weekend day using if-else statements.
+
+
 
 #include <bits/stdc++.h>
 using namespace std;
 
-string divisibleBy3And5(int k)
+string WeekDaysOrWeekend(char *day)
 {
-    if (k % 3 == 0 && k % 5 == 0)
+    if (day == "saturday" || day == "sunday")
     {
-        return "Yes";
+        return "Weekend";
     }
     else
     {
-        return "No";
+        return "Week Days";
     }
 }
 
 int main()
 {
-    int k;
-    cout << "Enter a number : ";
-    cin >> k;
+    char day[8];
+    cout << "Enter Day : ";
+    cin >> day;
 
-    cout << divisibleBy3And5(k);
+    cout << WeekDaysOrWeekend(day);
 
     return 0;
 }
